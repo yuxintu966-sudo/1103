@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韓語小學堂：生活招呼與稱呼篇</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. 開始畫面 -->
+        <div id="start-screen" class="screen active">
+            <h1 class="main-title">韓語小學堂</h1>
+            <p class="sub-title">生活招呼與稱呼篇</p>
+            <div class="intro-icon">🇰🇷✨</div>
+            <div class="learning-goals">
+                <h3>🎯 學習目標</h3>
+                <ul>
+                    <li>認識 6 個常用韓語生活單字</li>
+                    <li>學會辨識韓語發音與情境圖片</li>
+                    <li>開口跟著練習說韓語</li>
+                </ul>
+            </div>
+            <button id="start-btn" class="big-btn primary-btn">開始遊戲 🚀</button>
+        </div>
+
+        <!-- 2. 作答畫面 -->
+        <div id="quiz-screen" class="screen">
+            <div class="header-info">
+                <span id="question-number">第 1/6 題</span>
+            </div>
+            
+            <!-- 進度條 -->
+            <div id="progress-bar-container">
+                <div class="progress-segment"></div>
+                <div class="progress-segment"></div>
+                <div class="progress-segment"></div>
+                <div class="progress-segment"></div>
+                <div class="progress-segment"></div>
+                <div class="progress-segment"></div>
+            </div>
+
+            <!-- 圖片區 -->
+            <div class="image-box">
+                <div id="image-display"></div>
+            </div>
+
+            <!-- 題目區 -->
+            <h2 id="question-text">題目載入中...</h2>
+
+            <!-- 選項按鈕區 -->
+            <div id="options-container" class="options-grid"></div>
+
+            <!-- 回饋區 -->
+            <div id="feedback-card" class="feedback-card hidden">
+                <span id="feedback-text"></span>
+                <button id="next-btn" class="next-btn">下一題 ➡️</button>
+            </div>
+        </div>
+
+        <!-- 3. 成績結算畫面 -->
+        <div id="result-screen" class="screen">
+            <div class="star-badge">⭐</div>
+            <h2>太棒了！挑戰完成！</h2>
+            <div class="score-display">
+                獲得星星：<span id="stars-count">6</span> / 6 個
+            </div>
+            <div id="result-message" class="result-message"></div>
+
+            <div class="action-buttons">
+                <button id="retry-wrong-btn" class="action-btn secondary-btn hidden">錯題再練 🔄</button>
+                <button id="restart-btn" class="action-btn primary-btn">從頭再玩 🎮</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>

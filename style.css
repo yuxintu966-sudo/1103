@@ -1,0 +1,253 @@
+/* 全局樣式設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+}
+
+body {
+    background-color: #FAF6F0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    padding: 24px;
+    overflow: hidden;
+}
+
+.screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* 標題與按鈕設計 */
+.main-title {
+    color: #E06D82;
+    font-size: 2rem;
+    margin-bottom: 4px;
+}
+
+.sub-title {
+    color: #F4C430;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.intro-icon {
+    font-size: 5rem;
+    margin: 15px 0;
+}
+
+.learning-goals {
+    background-color: #FFF9E6;
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    text-align: left;
+    width: 100%;
+}
+
+.learning-goals h3 {
+    color: #E06D82;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.learning-goals li {
+    font-size: 0.95rem;
+    color: #555;
+    margin-left: 20px;
+    margin-bottom: 4px;
+}
+
+.big-btn, .action-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.primary-btn {
+    background-color: #E06D82;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: #F4C430;
+    color: white;
+}
+
+.big-btn:active, .action-btn:active {
+    transform: scale(0.97);
+}
+
+/* 作答頁面樣式 */
+.header-info {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#progress-bar-container {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.progress-segment {
+    flex: 1;
+    height: 10px;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+}
+
+.progress-segment.current { background-color: #F4C430; }
+.progress-segment.correct { background-color: #4C9A2A; }
+.progress-segment.wrong { background-color: #D9534F; }
+
+/* 圖片顯示區 */
+.image-box {
+    width: 100%;
+    height: 180px;
+    background-color: #FFF3F5;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 2px dashed #E06D82;
+}
+
+.svg-illustration {
+    font-size: 5rem;
+}
+
+#question-text {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 選項按鈕 */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.option-btn {
+    background-color: #F8F9FA;
+    border: 2px solid #E9ECEF;
+    border-radius: 16px;
+    padding: 14px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option-btn:hover {
+    border-color: #E06D82;
+    background-color: #FFF9FA;
+}
+
+.option-btn.correct-choice {
+    background-color: #4C9A2A !important;
+    color: white !important;
+    border-color: #4C9A2A !important;
+}
+
+.option-btn.wrong-choice {
+    background-color: #D9534F !important;
+    color: white !important;
+    border-color: #D9534F !important;
+}
+
+/* 回饋卡片區 */
+.feedback-card {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.feedback-card.correct-bg {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+}
+
+.feedback-card.wrong-bg {
+    background-color: #FFEBEE;
+    color: #C62828;
+}
+
+.feedback-card.hidden { display: none; }
+
+.next-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 結算頁面 */
+.star-badge {
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+.score-display {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #E06D82;
+}
+
+.result-message {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.action-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hidden { display: none !important; }
